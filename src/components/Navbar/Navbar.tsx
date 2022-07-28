@@ -6,7 +6,7 @@ import { BiMessage } from "react-icons/bi";
 
 import "./Navbar.scss";
 
-const Navbar = () => {
+const Navbar = (classNames: any) => {
   const icons = [HiHome, BsFillPersonFill, BsFillGearFill, BiMessage];
   const menuItem = [
     { name: "Home", id: "home" },
@@ -22,14 +22,16 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="app__navbar">
+    <nav className={`app__navbar ${classNames}`}>
       <ul>
         {menuItem.map((item, idx) => {
           const Icon = icons[idx];
           return (
             <li key={item.id}>
-              <Icon className="icon" />
-              <p>{item.name}</p>
+              <Icon className="icon" id="ikonka" />
+              <a href={`#${item.id}`}>
+                <p>{item.name}</p>
+              </a>
             </li>
           );
         })}

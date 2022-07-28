@@ -28,7 +28,7 @@
     }
     .icon {
       color: #6b7688;
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
     p {
@@ -38,4 +38,8 @@
       color: #6b7688;
     }
   }
+}
+
+#contact:target .icon {
+  transform: scale(0.6);
 }
