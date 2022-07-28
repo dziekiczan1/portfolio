@@ -27,12 +27,10 @@ const Navbar = () => {
         {menuItem.map((item, idx) => {
           const Icon = icons[idx];
           return (
-            <Link to={item.id} key={item.id} className="item-link">
-              <li>
-                <Icon className="icon" />
-                <p>{item.name}</p>
-              </li>
-            </Link>
+            <li key={item.id}>
+              <Icon className="icon" />
+              <p>{item.name}</p>
+            </li>
           );
         })}
       </ul>
