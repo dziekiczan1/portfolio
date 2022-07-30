@@ -47,7 +47,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`app__navbar`}>
+    <nav className="app__navbar app__primarybg">
       <ul>
         {menuItem.map((item, idx) => {
           return (
