@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Social.scss";
 import { gsap } from "gsap";
 import { Expo, Power1 } from "gsap";
-
+import { CSSPlugin } from "gsap/CSSPlugin";
+gsap.registerPlugin(CSSPlugin);
 const Social = () => {
   const quadrantItemsUser = useRef<any>();
   const quadrantItemsGit = useRef<any>();
@@ -11,26 +12,43 @@ const Social = () => {
   const socialmediaicon = useRef<any>();
 
   const tl = gsap.timeline({ paused: true });
+
   tl.timeScale(1.6);
 
   tl.to(
     socialmediaicon,
-    0.4,
-    { rotation: 45, width: "120px", height: "120px", ease: Expo.easeOut },
+    {
+      duration: 0.4,
+      rotation: 45,
+      width: "120px",
+      height: "120px",
+      ease: Expo.easeOut,
+    },
     "first"
   );
-  tl.to(".plus .plus-vertical", 0.3, { height: "0", ease: Power1.easeIn }, 1);
-  tl.to(".plus .plus-horizontal", 0.3, { width: "0", ease: Power1.easeIn }, 1);
+  tl.to(
+    ".plus .plus-vertical",
+    { duration: 0.3, height: "0", ease: Power1.easeIn },
+    "first"
+  );
+  tl.to(
+    ".plus .plus-horizontal",
+    { duration: 0.3, width: "0", ease: Power1.easeIn },
+    "first"
+  );
 
-  tl.to(".app__socialmediaicon", 0, { backgroundColor: "transparent" });
-  tl.to(quadrantItemsUser, 0.15, { x: -5, y: -5 }, "seperate");
-  tl.to("#arrow-up", 0.2, { opacity: 1, y: 0 }, "seperate+=0.2");
-  tl.to(quadrantItemsGit, 0.15, { x: 5, y: -5 }, "seperate");
-  tl.to("#arrow-right", 0.2, { opacity: 1, x: 0 }, "seperate+=0.2");
-  tl.to(quadrantItemsLinked, 0.15, { x: 5, y: 5 }, "seperate");
-  tl.to("#arrow-down", 0.2, { opacity: 1, y: 0 }, "seperate+=0.2");
-  tl.to(quadrantItemsFile, 0.15, { x: -5, y: 5 }, "seperate");
-  tl.to("#arrow-left", 0.2, { opacity: 1, x: 0 }, "seperate+=0.2");
+  tl.to(".app__socialmediaicon", {
+    duration: 0,
+    backgroundColor: "transparent",
+  });
+  tl.to(quadrantItemsUser, { duration: 0.15, x: -5, y: -5 }, "seperate");
+  tl.to("#arrow-up", { duration: 0.2, opacity: 1, y: 0 }, "seperate+=0.2");
+  tl.to(quadrantItemsGit, { duration: 0.15, x: 5, y: -5 }, "seperate");
+  tl.to("#arrow-right", { duration: 0.2, opacity: 1, x: 0 }, "seperate+=0.2");
+  tl.to(quadrantItemsLinked, { duration: 0.15, x: 5, y: 5 }, "seperate");
+  tl.to("#arrow-down", { duration: 0.2, opacity: 1, y: 0 }, "seperate+=0.2");
+  tl.to(quadrantItemsFile, { duration: 0.15, x: -5, y: 5 }, "seperate");
+  tl.to("#arrow-left", { duration: 0.2, opacity: 1, x: 0 }, "seperate+=0.2");
 
   //   cube.addEventListener("mouseenter", playTimeline);
   //   cube.addEventListener("mouseleave", reverseTimeline);
