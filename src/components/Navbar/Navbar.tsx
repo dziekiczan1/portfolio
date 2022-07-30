@@ -1,19 +1,33 @@
-import { Link } from "react-router-dom";
 import { HiHome } from "react-icons/hi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { BsFillGearFill } from "react-icons/bs";
-import { BiMessage } from "react-icons/bi";
+import { AiFillMessage } from "react-icons/ai";
 
 import "./Navbar.scss";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [select, setSelect] = useState(false);
-  const handleSelect = () => {
-    setSelect(!select);
+  const ListItem = ({ isActive, onClick, name, id, idx }: any) => {
+    const className = `${isActive ? "active" : "off"}`;
+    const Icon = icons[idx];
+    return (
+      <li onClick={onClick} className={className}>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="motiondiv"
+        >
+          <a href={`#${id}`}>
+            <Icon className="icon" />
+            <p>{name}</p>
+          </a>
+        </motion.div>
+      </li>
+    );
   };
-  const icons = [HiHome, BsFillPersonFill, BsFillGearFill, BiMessage];
+
+  const icons = [HiHome, BsFillPersonFill, BsFillGearFill, AiFillMessage];
   const menuItem = [
     { name: "Home", id: "home" },
     { name: "About", id: "about" },
@@ -27,20 +41,24 @@ const Navbar = () => {
     },
   ];
 
+  const [activeElem, setActive] = useState("Home");
+  const handleToggle = (newValue: any) => {
+    setActive(newValue);
+  };
+
   return (
     <nav className={`app__navbar`}>
       <ul>
         {menuItem.map((item, idx) => {
-          const Icon = icons[idx];
           return (
-            <li key={item.id} onClick={handleSelect}>
-              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                <Icon className="icon" />
-                <a href={`#${item.id}`}>
-                  <p>{item.name}</p>
-                </a>
-              </motion.div>
-            </li>
+            <ListItem
+              key={item.name}
+              isActive={activeElem === item.name}
+              onClick={() => handleToggle(item.name)}
+              id={item.id}
+              idx={idx}
+              name={item.name}
+            />
           );
         })}
       </ul>

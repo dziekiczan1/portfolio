@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="app__wrapper app__darkbg">
+    <div id="about" className="app__wrapper app__darkbg">
       <p className="p-text">
         My name is <b>Piotr Rzadkowolski</b> and I have been fascinated and
         involved in coding websites for some time.
