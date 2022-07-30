@@ -5,8 +5,14 @@ import { BsFillGearFill } from "react-icons/bs";
 import { BiMessage } from "react-icons/bi";
 
 import "./Navbar.scss";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
-const Navbar = (classNames: any) => {
+const Navbar = () => {
+  const [select, setSelect] = useState(false);
+  const handleSelect = () => {
+    setSelect(!select);
+  };
   const icons = [HiHome, BsFillPersonFill, BsFillGearFill, BiMessage];
   const menuItem = [
     { name: "Home", id: "home" },
@@ -22,16 +28,18 @@ const Navbar = (classNames: any) => {
   ];
 
   return (
-    <nav className={`app__navbar ${classNames}`}>
+    <nav className={`app__navbar`}>
       <ul>
         {menuItem.map((item, idx) => {
           const Icon = icons[idx];
           return (
-            <li key={item.id}>
-              <Icon className="icon" id="ikonka" />
-              <a href={`#${item.id}`}>
-                <p>{item.name}</p>
-              </a>
+            <li key={item.id} onClick={handleSelect}>
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                <Icon className="icon" />
+                <a href={`#${item.id}`}>
+                  <p>{item.name}</p>
+                </a>
+              </motion.div>
             </li>
           );
         })}
