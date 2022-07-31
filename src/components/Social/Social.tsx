@@ -1,11 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import "./Social.scss";
-import { Expo, Power1 } from "gsap";
-import { gsap } from "gsap";
-import { CSSRulePlugin } from "gsap/CSSRulePlugin";
+import { gsap, Expo, Power1 } from "gsap";
+import { BsFillPersonFill } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import { IoIosDocument } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa";
 
 const Social = () => {
-  gsap.registerPlugin(CSSRulePlugin);
   const quadrantItemsUser = useRef<any>();
   const quadrantItemsGit = useRef<any>();
   const quadrantItemsFile = useRef<any>();
@@ -18,36 +19,54 @@ const Social = () => {
 
   useEffect(() => {
     tl.to(
-      ".app__socialmediaicon",
-      0.4,
-      { rotation: 45, width: "120px", height: "120px", ease: Expo.easeOut },
+      socialmediaicon.current,
+      {
+        duration: 0.4,
+        rotation: 45,
+        width: "120px",
+        height: "120px",
+        ease: Expo.easeOut,
+      },
       "first"
     );
     tl.to(
       ".plus .plus-vertical",
-      0.3,
-      { height: "0", ease: Power1.easeIn },
+      { duration: 0.3, height: "0", ease: Power1.easeIn },
       "first"
     );
     tl.to(
       ".plus .plus-horizontal",
-      0.3,
-      { width: "0", ease: Power1.easeIn },
+      { duration: 0.3, width: "0", ease: Power1.easeIn },
       "first"
     );
-    tl.to(".app__socialmediaicon", 0, { backgroundColor: "transparent" });
+    tl.to(socialmediaicon.current, {
+      duration: 0,
+      backgroundColor: "transparent",
+    });
     tl.to(
       quadrantItemsUser.current,
       { duration: 0.15, x: -5, y: -5 },
       "seperate"
     );
-    tl.to("#arrow-up", 0.2, { opacity: 1, y: 0 }, "seperate+=0.2");
-    tl.to(quadrantItemsGit.current, 0.15, { x: 5, y: -5 }, "seperate");
-    tl.to("#arrow-right", 0.2, { opacity: 1, x: 0 }, "seperate+=0.2");
-    tl.to(quadrantItemsLinked.current, 0.15, { x: 5, y: 5 }, "seperate");
-    tl.to("#arrow-down", 0.2, { opacity: 1, y: 0 }, "seperate+=0.2");
-    tl.to(quadrantItemsFile.current, 0.15, { x: -5, y: 5 }, "seperate");
-    tl.to("#arrow-left", 0.2, { opacity: 1, x: 0 }, "seperate+=0.2");
+    tl.to("#arrow-up", { duration: 0.2, opacity: 1, y: 0 }, "seperate+=0.2");
+    tl.to(
+      quadrantItemsGit.current,
+      { duration: 0.15, x: 5, y: -5 },
+      "seperate"
+    );
+    tl.to("#arrow-right", { duration: 0.2, opacity: 1, x: 0 }, "seperate+=0.2");
+    tl.to(
+      quadrantItemsLinked.current,
+      { duration: 0.15, x: 5, y: 5 },
+      "seperate"
+    );
+    tl.to("#arrow-down", { duration: 0.2, opacity: 1, y: 0 }, "seperate+=0.2");
+    tl.to(
+      quadrantItemsFile.current,
+      { duration: 0.15, x: -5, y: 5 },
+      "seperate"
+    );
+    tl.to("#arrow-left", { duration: 0.2, opacity: 1, x: 0 }, "seperate+=0.2");
   });
 
   function playTimeline(e: any) {
@@ -77,8 +96,8 @@ const Social = () => {
           <div className="quadrant__item" ref={quadrantItemsUser}>
             <div className="quadrant__item__content">
               <a href="https://piotr.rzadkowolski.dev/" target="_blank">
-                <div className="fa-solid fa-user fa-lg" id="arrow-up">
-                  d
+                <div id="arrow-up">
+                  <BsFillPersonFill />
                 </div>
               </a>
             </div>
@@ -86,8 +105,8 @@ const Social = () => {
           <div className="quadrant__item" ref={quadrantItemsGit}>
             <div className="quadrant__item__content">
               <a href="https://github.com/dziekiczan1" target="_blank">
-                <div className="fa-brands fa-github fa-lg" id="arrow-left">
-                  c
+                <div id="arrow-left">
+                  <BsGithub />
                 </div>
               </a>
             </div>
@@ -98,8 +117,8 @@ const Social = () => {
                 href="https://piotr.rzadkowolski.dev/Piotr Rzadkowolski.pdf"
                 target="_blank"
               >
-                <div className="fa-solid fa-file fa-lg" id="arrow-right">
-                  b
+                <div id="arrow-right">
+                  <IoIosDocument />
                 </div>
               </a>
             </div>
@@ -111,7 +130,7 @@ const Social = () => {
                 target="_blank"
               >
                 <div className="fa-brands fa-linkedin fa-lg" id="arrow-down">
-                  a
+                  <FaLinkedin />
                 </div>
               </a>
             </div>
