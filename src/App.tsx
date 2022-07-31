@@ -1,4 +1,4 @@
-import { Navbar, About, Home, Projects, Contact } from "./components";
+import { Navbar, About, Home, Projects, Contact, Social } from "./components";
 import "./App.scss";
 
 const App = () => {
@@ -11,6 +11,7 @@ const App = () => {
         <Projects />
         <Contact />
       </div>
+      <Social />
     </div>
   );
 };

@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 const About = () => {
   return (
-    <div id="about" className="app__wrapper app__darkbg">
+    <motion.div id="about" className="app__wrapper app__darkbg">
       <p className="p-text">
         My name is <b>Piotr Rzadkowolski</b> and I have been fascinated and
         involved in coding websites for some time.
@@ -23,7 +24,7 @@ const About = () => {
       <p className="p-text">
         I love diving, cycling and meeting new people and places.
       </p>
-    </div>
+    </motion.div>
   );
 };
 
