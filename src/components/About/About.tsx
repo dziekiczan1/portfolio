@@ -18,20 +18,39 @@ const About = () => {
     { name: "GSAP", src: `${images.gsap}`, id: "gsap" },
   ];
 
+  const itemVariants = {
+    initial: { x: "-100vw", opacity: 0 },
+    animate: { x: 0, opacity: 1 },
+  };
+
+  const bounce = {
+    hover: { x: [0, -10, 0, 10], y: [0, -10, 0, 10] },
+  };
+
   return (
     <motion.div id="about" className="app__wrapper app__primarybg">
       <div className="myskills">
-        {skillItem.map((skill) => (
-          <div className="aboutme__skills-item">
+        {skillItem.map((skill, i) => (
+          <motion.div
+            className="aboutme__skills-item"
+            variants={itemVariants}
+            initial="initial"
+            animate="animate"
+            transition={{ duration: 0.3, delay: i * 0.1 }}
+          >
             <motion.div
               id={skill.id}
-              whileInView={{ x: [100, 0] }}
-              transition={{ duration: 1, ease: "easeInOut" }}
+              variants={bounce}
+              whileHover="hover"
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+              }}
             >
               <img src={skill.src} alt={skill.name} />
             </motion.div>
             <p className="p-text">{skill.name}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
 
