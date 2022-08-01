@@ -1,9 +1,40 @@
 import { motion } from "framer-motion";
-import React from "react";
+import "./About.scss";
+import { images } from "../../constants";
 
 const About = () => {
+  const skillItem = [
+    { name: "TypeScript", src: `${images.ts}`, id: "ts" },
+    { name: "React", src: `${images.react}`, id: "react" },
+    { name: "Redux", src: `${images.redux}`, id: "redux" },
+    { name: "MongoDB", src: `${images.mongodb}`, id: "mongodb" },
+    { name: "Node", src: `${images.node}`, id: "node" },
+    { name: "Express", src: `${images.exp}`, id: "express" },
+    { name: "Sass", src: `${images.sass}`, id: "sass" },
+    { name: "Api", src: `${images.api}`, id: "api" },
+    { name: "Javascript", src: `${images.js}`, id: "js" },
+    { name: "Css", src: `${images.css}`, id: "css" },
+    { name: "Bootstrap", src: `${images.bootstrap}`, id: "bootstrap" },
+    { name: "GSAP", src: `${images.gsap}`, id: "gsap" },
+  ];
+
   return (
-    <motion.div id="about" className="app__wrapper app__darkbg">
+    <motion.div id="about" className="app__wrapper app__primarybg">
+      <div className="myskills">
+        {skillItem.map((skill) => (
+          <div className="aboutme__skills-item">
+            <motion.div
+              id={skill.id}
+              whileInView={{ x: [100, 0] }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+            >
+              <img src={skill.src} alt={skill.name} />
+            </motion.div>
+            <p className="p-text">{skill.name}</p>
+          </div>
+        ))}
+      </div>
+
       <p className="p-text">
         My name is <b>Piotr Rzadkowolski</b> and I have been fascinated and
         involved in coding websites for some time.

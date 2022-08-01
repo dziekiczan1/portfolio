@@ -42,6 +42,7 @@ const Navbar = () => {
   ];
 
   const [activeElem, setActive] = useState("Home");
+
   const handleToggle = (newValue: any) => {
     setActive(newValue);
   };
