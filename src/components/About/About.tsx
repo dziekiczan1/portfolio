@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import "./About.scss";
 import { images } from "../../constants";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const skillItem = [
@@ -18,34 +22,39 @@ const About = () => {
     { name: "GSAP", src: `${images.gsap}`, id: "gsap" },
   ];
 
-  const itemVariants = {
-    initial: { x: "-100vw", opacity: 0 },
-    animate: { x: 0, opacity: 1 },
-  };
+  const ref = useRef<any>();
 
-  const bounce = {
-    hover: { x: [0, -10, 0, 10], y: [0, -10, 0, 10] },
-  };
+  useEffect(() => {
+    gsap.set(ref.current, { opacity: 0, scale: 0.6 });
+    gsap.to(ref.current, {
+      scrollTrigger: {
+        trigger: ".myskills",
+        toggleActions: "restart pause reverse pause",
+      },
+      opacity: 1,
+      scale: 1,
+      duration: 2,
+    });
+  }, []);
+
+  // const itemVariants = {
+  //   initial: { x: "-100vw", opacity: 0 },
+  //   animate: { x: 0, opacity: 1 },
+  //   variants={itemVariants}
+  //   initial="initial"
+  //   animate="animate"
+  //   transition={{ duration: 0.3, delay: i * 0.1 }}
+  // };
 
   return (
     <motion.div id="about" className="app__wrapper app__primarybg">
-      <div className="myskills">
+      <div className="myskills" ref={ref}>
         {skillItem.map((skill, i) => (
-          <motion.div
-            className="aboutme__skills-item"
-            variants={itemVariants}
-            initial="initial"
-            animate="animate"
-            transition={{ duration: 0.3, delay: i * 0.1 }}
-          >
+          <motion.div className="aboutme__skills-item">
             <motion.div
               id={skill.id}
-              variants={bounce}
-              whileHover="hover"
-              transition={{
-                duration: 0.5,
-                ease: "easeOut",
-              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
               <img src={skill.src} alt={skill.name} />
             </motion.div>
