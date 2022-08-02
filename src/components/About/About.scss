@@ -1,5 +1,7 @@
-.myskills {
+.aboutme__skills-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -11,26 +13,38 @@
   width: 15%;
 
   margin: 1rem;
+
+  div {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #fef4f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px #46364a;
+    margin-bottom: 0.8rem;
+  }
+
+  img {
+    width: 50%;
+    height: 50%;
+  }
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
 }
 
-.aboutme__skills-item div {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-color: #fef4f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 15px #46364a;
-}
-
-.aboutme__skills-item img {
-  width: 50%;
-  height: 50%;
-}
-
-.aboutme__skills-item p {
-  font-size: 0.8rem;
-  font-weight: 500;
-  text-transform: uppercase;
+.aboutme__text-container {
+  margin-bottom: 2rem;
+  p {
+    font-size: 1.2rem;
+    line-height: 2;
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
