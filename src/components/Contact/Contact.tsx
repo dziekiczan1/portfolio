@@ -1,8 +1,32 @@
 import "./Contact.scss";
 import { images } from "../../constants";
 import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef<any>();
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form.current,
+        "YOUR_PUBLIC_KEY"
+      )
+      .then(
+        (result: any) => {
+          console.log(result.text);
+        },
+        (error: any) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div id="contact" className="app__wrapper app__primarybg">
       <div className="contact-wrapper-container">
@@ -27,8 +51,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact__form-container">
-          <form id="contact-form">
-            <input type="hidden" name="contact_number" />
+          <form id="contact-form" ref={form} onSubmit={sendEmail}>
             <div className="contact-form-status"></div>
             <label htmlFor="fname">Name</label>
             <input
