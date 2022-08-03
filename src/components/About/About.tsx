@@ -76,8 +76,9 @@ const About = () => {
           <motion.div className="aboutme__skills-item">
             <motion.div
               id={skill.id}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1, rotate: [0, 30, -30, 0] }}
               whileTap={{ scale: 0.9 }}
+              transition={{ ease: "easeInOut" }}
             >
               <img src={skill.src} alt={skill.name} />
             </motion.div>
