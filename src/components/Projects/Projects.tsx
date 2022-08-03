@@ -3,6 +3,10 @@ import "./Projects.scss";
 import { images } from "../../constants";
 import { BsGithub } from "react-icons/bs";
 import { AiFillEye } from "react-icons/ai";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   const projectItem = [
@@ -80,11 +84,26 @@ const Projects = () => {
     },
   ];
 
+  const refer = useRef<any>();
+
+  useEffect(() => {
+    gsap.from("#project-card", { opacity: 0, scale: 0.6 });
+    gsap.to("#project-card", {
+      scrollTrigger: {
+        trigger: ".projects__container",
+        toggleActions: "play pause restart pause",
+      },
+      opacity: 1,
+      scale: 1,
+      duration: 2,
+    });
+  }, []);
+
   return (
     <motion.div id="projects" className="app__wrapper app__primarybg">
       <div className="projects__container">
         {projectItem.map((project) => (
-          <div id="project-card">
+          <div id="project-card" ref={refer}>
             <div className="project-image">
               <img src={project.src} alt={project.name} />
               <div className="project-info">
@@ -96,26 +115,34 @@ const Projects = () => {
                   <p id="stack-title">Stack used:</p>
                   <p>{project.stack}</p>
                   <div className="imghover-actions">
-                    <div className="imghover-icons">
+                    <div className="imghover-details">
                       <a
                         href={project.projecthref}
                         target="_blank"
                         rel="noreferrer"
                       >
-                        <AiFillEye />
+                        <div className="imghover-icons">
+                          <AiFillEye />
+                        </div>
+                        <div>
+                          <p className="p-text">Live</p>
+                        </div>
                       </a>
                     </div>
-                    <p className="p-text">Live</p>
-                    <div className="imghover-icons">
+                    <div className="imghover-details">
                       <a
                         href={project.githubhref}
                         target="_blank"
                         rel="noreferrer"
                       >
-                        <BsGithub />
+                        <div className="imghover-icons">
+                          <BsGithub />
+                        </div>
+                        <div>
+                          <p className="p-text">Github</p>
+                        </div>
                       </a>
                     </div>
-                    <p className="p-text">Github</p>
                   </div>
                 </div>
               </div>

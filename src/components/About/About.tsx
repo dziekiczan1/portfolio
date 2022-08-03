@@ -23,13 +23,25 @@ const About = () => {
   ];
 
   const ref = useRef<any>();
+  const text = useRef<any>();
 
   useEffect(() => {
+    gsap.set(text.current, { opacity: 0, y: -200 });
+    gsap.to(text.current, {
+      scrollTrigger: {
+        trigger: ".aboutme__skills-container",
+        toggleActions: "play pause restart pause",
+      },
+      opacity: 1,
+      y: 0,
+      duration: 2,
+    });
+
     gsap.set(ref.current, { opacity: 0, scale: 0.6 });
     gsap.to(ref.current, {
       scrollTrigger: {
         trigger: ".aboutme__skills-container",
-        toggleActions: "restart pause pause pause",
+        toggleActions: "play pause restart pause",
       },
       opacity: 1,
       scale: 1,
@@ -37,18 +49,9 @@ const About = () => {
     });
   }, []);
 
-  // const itemVariants = {
-  //   initial: { x: "-100vw", opacity: 0 },
-  //   animate: { x: 0, opacity: 1 },
-  //   variants={itemVariants}
-  //   initial="initial"
-  //   animate="animate"
-  //   transition={{ duration: 0.3, delay: i * 0.1 }}
-  // };
-
   return (
     <motion.div id="about" className="app__wrapper app__primarybg">
-      <div className="aboutme__text-container" ref={ref}>
+      <div className="aboutme__text-container" ref={text}>
         <p>
           My name is <b>Piotr Rzadkowolski</b> and I have been fascinated and
           involved in coding websites for some time.
