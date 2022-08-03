@@ -1,0 +1,119 @@
+.contact-wrapper-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__formheading-contact {
+  width: 70%;
+  display: flex;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  padding: 0 1.3rem;
+  margin: 2rem;
+}
+
+.c-icons {
+  color: #6b7688;
+  margin-right: 0.5rem;
+}
+
+.contact__formheading-details {
+  width: 60%;
+  margin: 1rem 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contact__formheading-email p,
+.contact__formheading-phone p {
+  margin: 0;
+}
+
+.contact-formheading-heading h1 {
+  margin: 0;
+  color: #46364a;
+}
+
+.contact__formheading-email,
+.contact__formheading-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-profilepic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fef4f5;
+  box-shadow: 0 0 15px #46364a;
+  overflow: hidden;
+  text-align: center;
+  margin: 1rem;
+}
+
+.contact-profilepic img {
+  margin-top: 0.5rem;
+  width: 70%;
+  height: 70%;
+}
+
+.contact__form-container {
+  width: 70%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 0 2rem 2rem 2rem;
+  display: flex;
+}
+
+.contact-form-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #000;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+label {
+  color: #000;
+}
+
+textarea,
+input {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
