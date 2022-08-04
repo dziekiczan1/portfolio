@@ -51,6 +51,22 @@ const About = () => {
 
   return (
     <motion.div id="about" className="app__wrapper app__primarybg">
+      <motion.div
+        className="heading-text"
+        whileInView={{
+          opacity: [0, 1],
+          scale: [7, 1],
+          y: [50, 0],
+        }}
+      >
+        <motion.div
+          whileInView={{
+            width: [0, 300],
+          }}
+        ></motion.div>
+        <h1>Here you can find out more about me!</h1>
+      </motion.div>
+
       <div className="aboutme__text-container" ref={text}>
         <p>
           My name is <b>Piotr Rzadkowolski</b> and I have been fascinated and

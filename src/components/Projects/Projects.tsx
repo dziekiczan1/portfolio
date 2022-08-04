@@ -101,6 +101,21 @@ const Projects = () => {
 
   return (
     <motion.div id="projects" className="app__wrapper app__primarybg">
+      <motion.div
+        className="heading-text"
+        whileInView={{
+          opacity: [0, 1],
+          scale: [7, 1],
+          y: [50, 0],
+        }}
+      >
+        <motion.div
+          whileInView={{
+            width: [0, 300],
+          }}
+        ></motion.div>
+        <h1>Take a look at some of my works!</h1>
+      </motion.div>
       <div className="projects__container">
         {projectItem.map((project) => (
           <div id="project-card" ref={refer}>

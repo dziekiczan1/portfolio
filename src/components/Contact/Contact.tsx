@@ -31,7 +31,7 @@ const Contact = () => {
   return (
     <div id="contact" className="app__wrapper app__primarybg">
       <motion.div
-        id="demo-text"
+        className="heading-text"
         whileInView={{
           opacity: [0, 1],
           scale: [7, 1],
@@ -42,9 +42,7 @@ const Contact = () => {
           whileInView={{
             width: [0, 300],
           }}
-        >
-          {" "}
-        </motion.div>
+        ></motion.div>
         <h1>Please, leave me a message</h1>
       </motion.div>
 
@@ -57,9 +55,14 @@ const Contact = () => {
       >
         <div className="contact__formheading-contact">
           <div className="contact-profilepic">
-            <div id="peter">
+            <motion.div
+              id="peter"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ ease: "easeInOut" }}
+            >
               <img src={images.profilesm} alt="Piotr Rzadkowolski" />
-            </div>
+            </motion.div>
           </div>
           <div className="contact__formheading-details">
             <div className="contact-formheading-heading">
