@@ -31,6 +31,15 @@ const Contact = () => {
   return (
     <div id="contact" className="app__wrapper app__primarybg">
       <motion.div
+        id="demo-text"
+        whileInView={{
+          scale: [7, 1],
+        }}
+      >
+        Please, leave me a message
+      </motion.div>
+
+      <motion.div
         className="contact-wrapper-container"
         whileInView={{
           opacity: [0, 1],
