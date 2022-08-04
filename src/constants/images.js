@@ -1,4 +1,5 @@
 import profile from "../assets/profile3.png";
+import profilesm from "../assets/profilesmall.png";
 import circle from "../assets/circle.svg";
 import redux from "../assets/redux.png";
 import react from "../assets/react.png";
@@ -31,6 +32,7 @@ import proj13 from "../assets/proj13.jpg";
 
 export default {
   profile,
+  profilesm,
   circle,
   redux,
   react,

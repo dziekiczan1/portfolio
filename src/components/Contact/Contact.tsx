@@ -38,6 +38,13 @@ const Contact = () => {
           y: [50, 0],
         }}
       >
+        <motion.div
+          whileInView={{
+            width: [0, 300],
+          }}
+        >
+          {" "}
+        </motion.div>
         <h1>Please, leave me a message</h1>
       </motion.div>
 
@@ -51,7 +58,7 @@ const Contact = () => {
         <div className="contact__formheading-contact">
           <div className="contact-profilepic">
             <div id="peter">
-              <img src={images.profile} alt="Piotr Rzadkowolski" />
+              <img src={images.profilesm} alt="Piotr Rzadkowolski" />
             </div>
           </div>
           <div className="contact__formheading-details">
