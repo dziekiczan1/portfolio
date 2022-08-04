@@ -33,10 +33,12 @@ const Contact = () => {
       <motion.div
         id="demo-text"
         whileInView={{
+          opacity: [0, 1],
           scale: [7, 1],
+          y: [50, 0],
         }}
       >
-        Please, leave me a message
+        <h1>Please, leave me a message</h1>
       </motion.div>
 
       <motion.div
