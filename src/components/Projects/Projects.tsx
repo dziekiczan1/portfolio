@@ -32,7 +32,7 @@ const Projects = () => {
       projecthref: "https://createresumex.netlify.app/",
       githubhref: "https://github.com/dziekiczan1/resumebuilder",
       desc: "This application allows the user to create their own resume. It will help you create a simple and readable CV.",
-      stack: "React, Typescript, Redux Toolkit, Node.js, Express, TailwindCSS",
+      stack: "React, Typescript, Redux Toolkit, Node.js, Express",
     },
     {
       name: "NBApp",

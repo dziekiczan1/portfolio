@@ -98,7 +98,7 @@ const About = () => {
             >
               <img src={skill.src} alt={skill.name} />
             </motion.div>
-            <p className="p-text">{skill.name}</p>
+            <p>{skill.name}</p>
           </motion.div>
         ))}
       </div>
