@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
 import { images } from "../../constants";
 import "./Home.scss";
+import { gsap } from "gsap";
 
 const Home = () => {
   // const circle1 = useRef<any>();
@@ -19,7 +18,14 @@ const Home = () => {
   // });
 
   return (
-    <div id="home" className="app__header app__flex app__primarybg">
+    <div id="home" className="app__header app__primarybg">
+      <div className="home__welcometext">
+        <div className="home__messagecloud">
+          <h1 id="home__messagecloud-heading">Piotr Rzadkowolski</h1>
+          <p id="home__messagecloud-paragraph">Front-End Developer</p>
+        </div>
+        <div className="home__messagecloud-tick"></div>
+      </div>
       <div className="app__header-img">
         <img src={images.profile} alt="" className="bg_profile" />
         <motion.img
