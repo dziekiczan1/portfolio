@@ -95,7 +95,11 @@ const Social = () => {
         <div className="quadrant">
           <div className="quadrant__item" ref={quadrantItemsUser}>
             <div className="quadrant__item__content">
-              <a href="https://piotr.rzadkowolski.dev/" target="_blank">
+              <a
+                href="https://piotr.rzadkowolski.dev/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div id="arrow-up">
                   <BsFillPersonFill />
                 </div>
@@ -104,7 +108,11 @@ const Social = () => {
           </div>
           <div className="quadrant__item" ref={quadrantItemsGit}>
             <div className="quadrant__item__content">
-              <a href="https://github.com/dziekiczan1" target="_blank">
+              <a
+                href="https://github.com/dziekiczan1"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div id="arrow-left">
                   <BsGithub />
                 </div>
@@ -116,6 +124,7 @@ const Social = () => {
               <a
                 href="https://piotr.rzadkowolski.dev/Piotr Rzadkowolski.pdf"
                 target="_blank"
+                rel="noreferrer"
               >
                 <div id="arrow-right">
                   <IoIosDocument />
@@ -128,6 +137,7 @@ const Social = () => {
               <a
                 href="https://www.linkedin.com/in/piotr-rzadkowolski-a0a44411b/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <div className="fa-brands fa-linkedin fa-lg" id="arrow-down">
                   <FaLinkedin />
