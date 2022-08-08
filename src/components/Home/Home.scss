@@ -15,7 +15,7 @@
 
   .bg_profile {
     position: absolute;
-    width: 38%;
+    height: 70%;
     object-fit: contain;
     z-index: 1;
   }
@@ -23,10 +23,10 @@
   .bg_circle {
     position: absolute;
     object-fit: contain;
+    height: 80%;
     right: -10%;
     bottom: -10%;
     z-index: 0;
-    width: 60%;
   }
 }
 
