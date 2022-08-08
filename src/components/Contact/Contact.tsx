@@ -78,7 +78,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="contact__form-container">
+        <div className="contact__form-container app__flex">
           <form id="contact-form" ref={form} onSubmit={sendEmail}>
             <div className="contact-form-status"></div>
             <label htmlFor="fname">Name</label>
