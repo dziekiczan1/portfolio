@@ -1,22 +1,8 @@
 import { motion } from "framer-motion";
 import { images } from "../../constants";
 import "./Home.scss";
-import { gsap } from "gsap";
 
 const Home = () => {
-  // const circle1 = useRef<any>();
-  // const circle2 = useRef<any>();
-  // const circle3 = useRef<any>();
-
-  // useEffect(() => {
-  //   const circles = [circle1.current, circle2.current, circle3.current];
-  //   gsap.fromTo(
-  //     circles,
-  //     { rotate: 0, scale: 0, x: 150, y: 50 },
-  //     { rotate: 360, scale: 1, x: 0, y: 0 }
-  //   );
-  // });
-
   return (
     <div id="home" className="app__header app__primarybg">
       <div className="home__welcometext">
