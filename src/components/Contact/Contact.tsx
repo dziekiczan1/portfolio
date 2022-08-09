@@ -1,12 +1,13 @@
 import "./Contact.scss";
 import { images } from "../../constants";
 import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 const Contact = () => {
   const form = useRef<any>();
+  const [isSend, setIsSend] = useState(false);
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -21,6 +22,7 @@ const Contact = () => {
       .then(
         (result: any) => {
           console.log(result.text);
+          setIsSend(true);
         },
         (error: any) => {
           console.log(error.text);
@@ -79,6 +81,11 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact__form-container app__flex">
+          {isSend ? (
+            <div className="contact-form-status">
+              Your message has been successfully sent!
+            </div>
+          ) : null}
           <form id="contact-form" ref={form} onSubmit={sendEmail}>
             <div className="contact-form-status"></div>
             <label htmlFor="fname">Name</label>
