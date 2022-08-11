@@ -26,26 +26,30 @@ const About = () => {
   const text = useRef<any>();
 
   useEffect(() => {
-    gsap.set(text.current, { opacity: 0, y: -200 });
-    gsap.to(text.current, {
-      scrollTrigger: {
-        trigger: ".aboutme__skills-container",
-        toggleActions: "play pause restart pause",
-      },
-      opacity: 1,
-      y: 0,
-      duration: 2,
-    });
+    ScrollTrigger.matchMedia({
+      "(min-width: 480px)": function () {
+        gsap.set(text.current, { opacity: 0, y: -200 });
+        gsap.to(text.current, {
+          scrollTrigger: {
+            trigger: ".aboutme__skills-container",
+            toggleActions: "play pause restart pause",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 2,
+        });
 
-    gsap.set(ref.current, { opacity: 0, scale: 0.6 });
-    gsap.to(ref.current, {
-      scrollTrigger: {
-        trigger: ".aboutme__skills-container",
-        toggleActions: "play pause restart pause",
+        gsap.set(ref.current, { opacity: 0, scale: 0.6 });
+        gsap.to(ref.current, {
+          scrollTrigger: {
+            trigger: ".aboutme__skills-container",
+            toggleActions: "play pause restart pause",
+          },
+          opacity: 1,
+          scale: 1,
+          duration: 2,
+        });
       },
-      opacity: 1,
-      scale: 1,
-      duration: 2,
     });
   }, []);
 
