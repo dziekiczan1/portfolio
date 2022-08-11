@@ -11,8 +11,11 @@
   justify-content: center;
   align-items: center;
   width: 15%;
-
   margin: 1rem;
+  @media (max-width: 480px) {
+    width: 20%;
+    margin: 1.2rem;
+  }
 
   div {
     width: 90px;
@@ -24,6 +27,11 @@
     align-items: center;
     box-shadow: 0 0 15px #46364a;
     margin-bottom: 0.8rem;
+
+    @media (max-width: 480px) {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   img {
@@ -36,15 +44,25 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
+    @media (max-width: 480px) {
+      font-size: 0.6rem;
+    }
   }
 }
 
 .aboutme__text-container {
   margin-bottom: 2rem;
+  @media (max-width: 480px) {
+    margin-bottom: 0.5rem;
+  }
   p {
     font-size: 1.2rem;
     line-height: 2;
     text-align: justify;
     text-justify: inter-word;
+    @media (max-width: 480px) {
+      font-size: 1rem;
+      line-height: 2;
+    }
   }
 }
