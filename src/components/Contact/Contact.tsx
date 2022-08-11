@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   const form = useRef<any>();
-  const [isSend, setIsSend] = useState(false);
+  const [isSend, setIsSend] = useState(true);
 
   const sendEmail = (e: any) => {
     e.preventDefault();
