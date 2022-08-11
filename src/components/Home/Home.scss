@@ -31,6 +31,10 @@
     right: -10%;
     bottom: -10%;
     z-index: 0;
+    @media (max-width: 480px) {
+      right: -30%;
+      bottom: -5%;
+    }
   }
 }
 
@@ -43,6 +47,9 @@
   height: 100%;
   right: 55%;
   z-index: 2;
+  @media (max-width: 480px) {
+    display: none;
+  }
 }
 
 .home__header-circle {
@@ -85,7 +92,7 @@
 }
 .home__messagecloud {
   margin: 2rem 0 0 2rem;
-  padding: 3rem 3rem;
+  padding: 3rem;
   border-radius: 1rem;
   display: inline-flex;
   align-items: flex-end;
@@ -95,6 +102,11 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   color: #313bac;
+  @media (max-width: 480px) {
+    margin: 1rem 0 0 1rem;
+    padding: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .home__messagecloud-tick {
@@ -106,9 +118,15 @@
   border-bottom: 0;
   border-right: 0;
   margin-bottom: -3em;
+  @media (max-width: 480px) {
+    left: 75%;
+  }
 }
 
 #home__messagecloud-heading {
   margin-bottom: 0;
   font-size: 3em;
+  @media (max-width: 480px) {
+    font-size: 2em;
+  }
 }
