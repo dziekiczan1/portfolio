@@ -123,12 +123,12 @@ const Projects = () => {
               <img src={project.src} alt={project.name} />
               <div className="project-info">
                 <div className="project-info-head">
-                  <h1>{project.name}</h1>
+                  <h2>{project.name}</h2>
                   <p className="p-text">{project.desc}</p>
                 </div>
                 <div className="project-info-bottom">
                   <p id="stack-title">Stack used:</p>
-                  <p>{project.stack}</p>
+                  <p className="p-text">{project.stack}</p>
                   <div className="imghover-actions">
                     <div className="imghover-details">
                       <a
