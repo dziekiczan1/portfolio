@@ -16,7 +16,9 @@
   justify-content: flex-end;
   align-items: flex-end;
   position: relative;
-
+  @media (max-width: 480px) {
+    object-fit: contain;
+  }
   .bg_profile {
     position: absolute;
     height: 70%;
