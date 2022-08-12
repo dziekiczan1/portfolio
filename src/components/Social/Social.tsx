@@ -139,7 +139,7 @@ const Social = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="fa-brands fa-linkedin fa-lg" id="arrow-down">
+                <div id="arrow-down">
                   <FaLinkedin />
                 </div>
               </a>

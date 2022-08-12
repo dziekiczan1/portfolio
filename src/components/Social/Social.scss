@@ -6,6 +6,7 @@
   justify-content: flex-end;
   right: 4%;
   bottom: 5%;
+
   @media (max-width: 480px) {
     display: none;
   }
@@ -14,7 +15,7 @@
 .app__socialmediaicon {
   width: 60px;
   height: 60px;
-  background: #008a5c;
+  background: #fa3383;
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -54,6 +55,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 20px rgba(240, 236, 47, 0.9);
 }
 
 .quadrant__item {
@@ -62,7 +64,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #008a5c;
+  background: #fa3383;
   border-radius: 6px;
   position: relative;
 }

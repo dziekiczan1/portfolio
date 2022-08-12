@@ -55,7 +55,7 @@
   padding: 1rem;
   max-height: 50%;
   @media (max-width: 480px) {
-    max-height: 50%;
+    max-height: 70%;
   }
 }
 
@@ -73,6 +73,9 @@
 .project-info h2 {
   margin-bottom: 0.5rem;
   color: #e4e4e4;
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 }
 
 .project-info p {
@@ -116,12 +119,16 @@
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-
   margin: 0.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+
+  @media (max-width: 480px) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .imghover-actions a {
