@@ -17,6 +17,7 @@
   align-items: flex-end;
   position: relative;
   @media (max-width: 480px) {
+    justify-content: flex-start;
     object-fit: contain;
   }
   .bg_profile {
@@ -33,6 +34,10 @@
     right: -10%;
     bottom: -10%;
     z-index: 0;
+    @media (max-width: 1024px) {
+      right: -40%;
+      bottom: -10%;
+    }
     @media (max-width: 480px) {
       right: -30%;
       bottom: -5%;
@@ -49,6 +54,9 @@
   height: 100%;
   right: 55%;
   z-index: 2;
+  @media (max-width: 1024px) {
+    right: 75%;
+  }
   @media (max-width: 480px) {
     display: none;
   }
@@ -75,6 +83,10 @@
   right: -150%;
   width: 100px;
   height: 100px;
+  @media (max-width: 1024px) {
+    top: 15%;
+    right: -100%;
+  }
 }
 
 #home__header-circle-react {
