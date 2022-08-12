@@ -82,9 +82,18 @@
   font-size: 1.4rem;
 }
 
+.social-icon {
+  color: #fff;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  color: rgba(255, 251, 0, 0.9);
+  scale: 1.4;
+}
+
 .quadrant__item__content a {
   text-decoration: none;
-  color: #fff;
 }
 
 #arrow-down,

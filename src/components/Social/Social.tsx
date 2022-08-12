@@ -101,7 +101,7 @@ const Social = () => {
                 rel="noreferrer"
               >
                 <div id="arrow-up">
-                  <BsFillPersonFill />
+                  <BsFillPersonFill className="social-icon" />
                 </div>
               </a>
             </div>
@@ -114,7 +114,7 @@ const Social = () => {
                 rel="noreferrer"
               >
                 <div id="arrow-left">
-                  <BsGithub />
+                  <BsGithub className="social-icon" />
                 </div>
               </a>
             </div>
@@ -127,7 +127,7 @@ const Social = () => {
                 rel="noreferrer"
               >
                 <div id="arrow-right">
-                  <IoIosDocument />
+                  <IoIosDocument className="social-icon" />
                 </div>
               </a>
             </div>
@@ -140,7 +140,7 @@ const Social = () => {
                 rel="noreferrer"
               >
                 <div id="arrow-down">
-                  <FaLinkedin />
+                  <FaLinkedin className="social-icon" />
                 </div>
               </a>
             </div>
