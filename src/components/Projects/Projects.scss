@@ -5,7 +5,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  @media (max-width: 480px) {
+  @media (max-width: 1023px) {
     flex-direction: column;
   }
 }
@@ -18,7 +18,7 @@
   max-width: 580px;
   border-radius: 0.5rem;
   box-shadow: 0 0 15px #46364a;
-  @media (max-width: 480px) {
+  @media (max-width: 1023px) {
     width: 90%;
   }
 }
@@ -73,6 +73,7 @@
 .project-info h2 {
   margin-bottom: 0.5rem;
   color: #e4e4e4;
+
   @media (max-width: 480px) {
     font-size: 1.2rem;
   }
