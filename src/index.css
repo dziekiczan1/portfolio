@@ -2,10 +2,7 @@
 
 :root {
   --font-base: "DM Sans", sans-serif;
-
   --primary-color: #edf2f8;
-  --dark-color: #e4e4e4;
-  --white-color: #ffffff;
 }
 
 * {
