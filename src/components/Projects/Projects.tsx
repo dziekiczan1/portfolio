@@ -117,8 +117,8 @@ const Projects = () => {
         <h1>Take a look at some of my works!</h1>
       </motion.div>
       <div className="projects__container">
-        {projectItem.map((project) => (
-          <div id="project-card" ref={refer}>
+        {projectItem.map((project, index) => (
+          <div id="project-card" ref={refer} key={index}>
             <div className="project-image">
               <img src={project.src} alt={project.name} />
               <div className="project-info">

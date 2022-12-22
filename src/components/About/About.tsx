@@ -93,7 +93,7 @@ const About = () => {
       </div>
       <div className="aboutme__skills-container" ref={ref}>
         {skillItem.map((skill, i) => (
-          <motion.div className="aboutme__skills-item">
+          <motion.div className="aboutme__skills-item" key={i}>
             <motion.div
               id={skill.id}
               whileHover={{ scale: 1.1, rotate: [0, 30, -30, 0] }}
