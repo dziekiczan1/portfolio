@@ -120,7 +120,12 @@ const Projects = () => {
         {projectItem.map((project, index) => (
           <div id="project-card" ref={refer} key={index}>
             <div className="project-image">
-              <img src={project.src} alt={project.name} />
+              <img
+                src={project.src}
+                alt={project.name}
+                width={580}
+                height={400}
+              />
               <div className="project-info">
                 <div className="project-info-head">
                   <h2>{project.name}</h2>

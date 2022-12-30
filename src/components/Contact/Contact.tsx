@@ -63,7 +63,12 @@ const Contact = () => {
               whileTap={{ scale: 0.9 }}
               transition={{ ease: "easeInOut" }}
             >
-              <img src={images.profilesm} alt="Piotr Rzadkowolski" />
+              <img
+                src={images.profilesm}
+                alt="Piotr Rzadkowolski"
+                width={134}
+                height={200}
+              />
             </motion.div>
           </div>
           <div className="contact__formheading-details">
