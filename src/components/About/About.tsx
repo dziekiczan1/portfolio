@@ -100,7 +100,7 @@ const About = () => {
               whileTap={{ scale: 0.9 }}
               transition={{ ease: "easeInOut" }}
             >
-              <img src={skill.src} alt={skill.name} />
+              <img src={skill.src} alt={skill.name} width={50} height={50} />
             </motion.div>
             <p>{skill.name}</p>
           </motion.div>

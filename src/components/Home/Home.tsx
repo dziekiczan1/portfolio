@@ -19,7 +19,7 @@ const Home = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
           className="bg_circle"
           src={images.circle}
-          alt=""
+          alt="Background circle"
         />
         <div className="home__header-circles">
           <motion.div
