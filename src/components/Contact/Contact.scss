@@ -53,8 +53,11 @@
   }
 }
 
-.contact__formheading-email p,
-.contact__formheading-phone p {
+.contact__formheading-email a,
+.contact__formheading-phone a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
 }
 
@@ -64,13 +67,6 @@
   @media (max-width: 480px) {
     font-size: 1.5rem;
   }
-}
-
-.contact__formheading-email,
-.contact__formheading-phone {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .contact-profilepic {
@@ -116,11 +112,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 600;
   color: #00c6b5;
   margin-bottom: 1rem;
+  &.error {
+    color: #d10505;
+  }
   @media (max-width: 480px) {
     font-size: 1.2rem;
     text-align: center;

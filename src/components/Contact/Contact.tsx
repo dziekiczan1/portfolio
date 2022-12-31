@@ -8,10 +8,9 @@ import { motion } from "framer-motion";
 const Contact = () => {
   const form = useRef<any>();
   const [isSend, setIsSend] = useState(false);
-
+  const [isError, setIsError] = useState(false);
   const sendEmail = (e: any) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_bn4qol6",
@@ -21,11 +20,11 @@ const Contact = () => {
       )
       .then(
         (result: any) => {
-          console.log(result.text);
           setIsSend(true);
+          e.target.reset();
         },
         (error: any) => {
-          console.log(error.text);
+          setIsError(true);
         }
       );
   };
@@ -76,12 +75,16 @@ const Contact = () => {
               <h1>Piotr Rzadkowolski</h1>
             </div>
             <div className="contact__formheading-email">
-              <HiOutlineMail className="c-icons" />
-              <p className="p-text">p.rzadkowolski@gmail.com</p>
+              <a href="mailto:p.rzadkowolski@gmail.com" className="p-text">
+                <HiOutlineMail className="c-icons" />
+                p.rzadkowolski@gmail.com
+              </a>
             </div>
             <div className="contact__formheading-phone">
-              <HiOutlinePhone className="c-icons" />
-              <p className="p-text">505-933-394</p>
+              <a href="tel:+48505933394" className="p-text">
+                <HiOutlinePhone className="c-icons" />
+                505-933-394
+              </a>
             </div>
           </div>
         </div>
@@ -89,6 +92,10 @@ const Contact = () => {
           {isSend ? (
             <div className="contact-form-status">
               Your message has been successfully sent!
+            </div>
+          ) : isError ? (
+            <div className="contact-form-status error">
+              There was a problem with sending your message. Try again!
             </div>
           ) : null}
           <form id="contact-form" ref={form} onSubmit={sendEmail}>
