@@ -11,15 +11,15 @@ const About = () => {
     { name: "TypeScript", src: `${images.ts}`, id: "ts" },
     { name: "React", src: `${images.react}`, id: "react" },
     { name: "Redux", src: `${images.redux}`, id: "redux" },
+    { name: "Tailwind CSS", src: `${images.tailwind}`, id: "tailwind" },
+    { name: "Framer Motion", src: `${images.framer}`, id: "framer" },
+    { name: "Javascript", src: `${images.js}`, id: "js" },
     { name: "MongoDB", src: `${images.mongodb}`, id: "mongodb" },
     { name: "Node", src: `${images.node}`, id: "node" },
     { name: "Express", src: `${images.exp}`, id: "express" },
     { name: "Sass", src: `${images.sass}`, id: "sass" },
     { name: "Api", src: `${images.api}`, id: "api" },
-    { name: "Javascript", src: `${images.js}`, id: "js" },
-    { name: "Css", src: `${images.css}`, id: "css" },
-    { name: "Bootstrap", src: `${images.bootstrap}`, id: "bootstrap" },
-    { name: "GSAP", src: `${images.gsap}`, id: "gsap" },
+    { name: "Magento2", src: `${images.magento}`, id: "magento" },
   ];
 
   const ref = useRef<any>();
