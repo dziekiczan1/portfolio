@@ -11,6 +11,22 @@ gsap.registerPlugin(ScrollTrigger);
 const Projects = () => {
   const projectItem = [
     {
+      name: "eRZet company",
+      src: `${images.proj14}`,
+      projecthref: "https://piotr.rzadkowolski.dev/erzet",
+      githubhref: "https://github.com/dziekiczan1/eRZet",
+      desc: "My company's website, where you can find more information about what we do. The website is bilingual and in two color variants.",
+      stack: "React, Tailwind CSS, Framer Motion",
+    },
+    {
+      name: "Piotr Rzadkowolski Portfolio",
+      src: `${images.proj15}`,
+      projecthref: "https://piotr.rzadkowolski.dev/",
+      githubhref: "https://github.com/dziekiczan1/portfolio",
+      desc: "My portfolio website, where you can find some information about me!",
+      stack: "React, Typescript, SCSS, Framer Motion, GSAP",
+    },
+    {
       name: "WhereTo? Dive!",
       src: `${images.projdive}`,
       projecthref: "https://memories.piotr.rzadkowolski.dev/",
@@ -65,14 +81,6 @@ const Projects = () => {
       githubhref: "https://github.com/dziekiczan1/cashflow",
       desc: "Simple one page webiste made for an accounting office. ",
       stack: "HTML, CSS, Javascript, Bootstrap",
-    },
-    {
-      name: "Drum Kit",
-      src: `${images.proj4}`,
-      projecthref: "https://piotr.rzadkowolski.dev/projects/drum-kit/",
-      githubhref: "https://github.com/dziekiczan1/drum-kit",
-      desc: "Drum Kit set made with HTML, CSS, Javascript",
-      stack: "HTML, CSS, Javascript",
     },
     {
       name: "Simon Game",

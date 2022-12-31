@@ -22,12 +22,7 @@ import magento from "../assets/magento2.svg";
 import projdive from "../assets/proj1.webp";
 import proj2 from "../assets/proj2.webp";
 import proj3 from "../assets/proj3.webp";
-import proj4 from "../assets/proj4.webp";
-import proj5 from "../assets/proj5.webp";
 import proj6 from "../assets/proj6.webp";
-import proj7 from "../assets/proj7.webp";
-import proj8 from "../assets/proj8.webp";
-import proj9 from "../assets/proj9.webp";
 import proj10 from "../assets/proj10.webp";
 import proj11 from "../assets/proj11.webp";
 import proj12 from "../assets/proj12.webp";
@@ -58,12 +53,7 @@ export default {
   projdive,
   proj2,
   proj3,
-  proj4,
-  proj5,
   proj6,
-  proj7,
-  proj8,
-  proj9,
   proj10,
   proj11,
   proj12,
