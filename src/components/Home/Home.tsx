@@ -58,7 +58,12 @@ const Home = () => {
                 y: [50, 0],
               }}
             >
-              <img src={images.node} alt="Node" width={48} height={48} />
+              <img
+                src={images.tailwind}
+                alt="TailwindCSS"
+                width={48}
+                height={48}
+              />
             </motion.div>
           </div>
         </div>

@@ -3,7 +3,7 @@ import profilesm from "../assets/profilesmall.webp";
 import circle from "../assets/circle.svg";
 import redux from "../assets/redux.webp";
 import react from "../assets/react.webp";
-import node from "../assets/node.webp";
+import node from "../assets/node.svg";
 
 import api from "../assets/api.webp";
 import bootstrap from "../assets/bootstrap.webp";
