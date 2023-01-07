@@ -13,7 +13,7 @@ const Projects = () => {
     {
       name: "eRZet company",
       src: `${images.proj14}`,
-      projecthref: "https://piotr.rzadkowolski.dev/erzet",
+      projecthref: "https://erzet.dev/",
       githubhref: "https://github.com/dziekiczan1/eRZet",
       desc: "My company's website, where you can find more information about what we do. The website is bilingual and in two color variants.",
       stack: "React, Tailwind CSS, Framer Motion",
