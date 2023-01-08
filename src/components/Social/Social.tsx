@@ -81,73 +81,114 @@ const Social = () => {
   }
 
   return (
-    <div className="app__socialmediaicon-wrapper">
-      <div
-        className="app__socialmediaicon"
-        ref={socialmediaicon}
-        onMouseEnter={playTimeline}
-        onMouseLeave={reverseTimeline}
-      >
-        <div className="plus">
-          <div className="plus-horizontal"></div>
-          <div className="plus-vertical"></div>
-        </div>
-        <div className="quadrant">
-          <div className="quadrant__item" ref={quadrantItemsUser}>
-            <div className="quadrant__item__content">
-              <a
-                href="https://piotr.rzadkowolski.dev/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div id="arrow-up">
-                  <BsFillPersonFill className="social-icon" />
-                </div>
-              </a>
-            </div>
+    <>
+      <div className="app__socialmediaicon-wrapper">
+        <div
+          className="app__socialmediaicon"
+          ref={socialmediaicon}
+          onMouseEnter={playTimeline}
+          onMouseLeave={reverseTimeline}
+        >
+          <div className="plus">
+            <div className="plus-horizontal"></div>
+            <div className="plus-vertical"></div>
           </div>
-          <div className="quadrant__item" ref={quadrantItemsGit}>
-            <div className="quadrant__item__content">
-              <a
-                href="https://github.com/dziekiczan1"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div id="arrow-left">
-                  <BsGithub className="social-icon" />
-                </div>
-              </a>
+          <div className="quadrant">
+            <div className="quadrant__item" ref={quadrantItemsUser}>
+              <div className="quadrant__item__content">
+                <a
+                  href="https://piotr.rzadkowolski.dev/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div id="arrow-up">
+                    <BsFillPersonFill className="social-icon" />
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="quadrant__item" ref={quadrantItemsFile}>
-            <div className="quadrant__item__content">
-              <a
-                href="https://piotr.rzadkowolski.dev/Piotr Rzadkowolski.pdf"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div id="arrow-right">
-                  <IoIosDocument className="social-icon" />
-                </div>
-              </a>
+            <div className="quadrant__item" ref={quadrantItemsGit}>
+              <div className="quadrant__item__content">
+                <a
+                  href="https://github.com/dziekiczan1"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div id="arrow-left">
+                    <BsGithub className="social-icon" />
+                  </div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="quadrant__item" ref={quadrantItemsLinked}>
-            <div className="quadrant__item__content">
-              <a
-                href="https://www.linkedin.com/in/piotr-rzadkowolski-a0a44411b/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div id="arrow-down">
-                  <FaLinkedin className="social-icon" />
-                </div>
-              </a>
+            <div className="quadrant__item" ref={quadrantItemsFile}>
+              <div className="quadrant__item__content">
+                <a
+                  href="https://piotr.rzadkowolski.dev/Piotr Rzadkowolski.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div id="arrow-right">
+                    <IoIosDocument className="social-icon" />
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div className="quadrant__item" ref={quadrantItemsLinked}>
+              <div className="quadrant__item__content">
+                <a
+                  href="https://www.linkedin.com/in/piotr-rzadkowolski-a0a44411b/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div id="arrow-down">
+                    <FaLinkedin className="social-icon" />
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      <div className="social-mobile">
+        <div className="quadrant__item__content-mobile">
+          <a
+            href="https://piotr.rzadkowolski.dev/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsFillPersonFill className="social-icon" />
+          </a>
+        </div>
+        <div className="quadrant__item__content-mobile">
+          <a
+            href="https://github.com/dziekiczan1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <BsGithub className="social-icon" />
+          </a>
+        </div>
+
+        <div className="quadrant__item__content-mobile">
+          <a
+            href="https://piotr.rzadkowolski.dev/Piotr Rzadkowolski.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <IoIosDocument className="social-icon" />
+          </a>
+        </div>
+        <div className="quadrant__item__content-mobile">
+          <a
+            href="https://www.linkedin.com/in/piotr-rzadkowolski-a0a44411b/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedin className="social-icon" />
+          </a>
+        </div>
+      </div>
+    </>
   );
 };
 
