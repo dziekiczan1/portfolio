@@ -2,6 +2,8 @@
 
 ### [Live Site](https://piotr.rzadkowolski.dev/)
 
+![Peter's Portfolio](https://piotr.rzadkowolski.dev/assets/proj15.webp)
+
 ## Introduction
 This is a code repository for the **Peter's Portfolio** project
 
